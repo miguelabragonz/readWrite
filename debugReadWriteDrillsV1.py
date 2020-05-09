@@ -1,10 +1,8 @@
 '''
 The following functions have problems that keep them from
 completing the task that they have to do.
-
 All the problems are either Logical or Syntactical errors with READ/WRITE.
 Focus on the reading and writing and find the problems with the READ/WRITE.
-
 The number of errors are as follows:
 readSingle: 3
 readAll: 3
@@ -18,24 +16,22 @@ This function takes a fileName and reads then prints the first
 line of the file.
 '''
 def readSingle(fileName):
-    f = open(fileName, 'r)
-    string = .readline()
-    f.close(
+    f = open("fileName", 'r')
+    string = f.readline()
     
     #Prints the read data
-    print(string.strip())
     return string
-
-readSingle("fileOne.txt")
-
+    print(string.strip())
+    readSingle("fileOne.txt")
+    f.close()
 '''
 This function takes a fileName and reads and prints ALL of the lines of the 
 file.
 '''
 def readAll(fileName):
-    file = open(fileName, 'r')
-    stringList = f.readline()
-    f.clse()
+    file = open("fileName", 'r')
+    stringList = file.readline()
+    file.close()
     
     #Prints all the read data
     x = 0
@@ -51,9 +47,9 @@ This function takes a fileName and some content and writes the content on
 the file.
 '''
 def writeStuff(fileName, content):
-    f = open(file, 'r')
-    f.wrte(content)
-    file.close()
+    f = open("file", 'r')
+    f.write(content)
+    f.close()
     print("DONE")
     return
 
@@ -64,15 +60,14 @@ This function takes a fileName and two pieces of content and writes them in the
 file.
 '''
 def writeDouble(fileName, content, contentTwo):
-    f.close()
-    f = open(, 'w')
-    f.wrte(content)
+    f = open("fileName", 'w')
+    f.write(content)
     f.write(contentTwo)
-    
+    f.close()
     print("DONE")
     return 
-
-writeDouble("fileThree.txt", "This is for the forth function.", 
+ 
+    fileName.writeDouble("fileThree.txt", "This is for the fourth function.", 
             "This is the second sentence.")
 
 '''
@@ -81,9 +76,9 @@ of the file.
 '''
 def writeAppend(fileName, append):
     f = open(fileName, '')
-    f.write()
-    f.close(
+    f.write(append)
+    f.close()
     print("DONE")
-    return
+    return 
 
 writeAppend("fileThree.txt", "This should be appended to the end.")
